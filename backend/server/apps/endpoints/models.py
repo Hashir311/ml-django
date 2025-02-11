@@ -9,7 +9,7 @@ class Endpoint(models.Model):
 
 class MLAlgorithm(models.Model):
     class Meta:
-        app_label = 'mlalgorithms'
+        app_label = 'endpoints'
     name = models.CharField(max_length=128)
     description = models.CharField(max_length=1000)
     code = models.CharField(max_length=50000)
@@ -20,7 +20,7 @@ class MLAlgorithm(models.Model):
 
 class MLAlgorithmStatus(models.Model):
     class Meta:
-        app_label = 'mlalgorithmstatuses'
+        app_label = 'endpoints'
     status = models.CharField(max_length=128)
     active = models.BooleanField()
     created_by = models.CharField(max_length=128)
@@ -29,7 +29,7 @@ class MLAlgorithmStatus(models.Model):
 
 class MLRequest(models.Model):
     class Meta:
-        app_label = 'mlrequests'
+        app_label = 'endpoints'
     input_data = models.CharField(max_length=10000)
     full_response = models.CharField(max_length=10000)
     response = models.CharField(max_length=10000)
